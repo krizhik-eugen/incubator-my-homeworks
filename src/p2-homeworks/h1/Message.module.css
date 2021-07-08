@@ -1,0 +1,43 @@
+.message {
+    display: flex;
+    margin: 10px;
+    align-items: flex-end;
+}
+
+.message img {
+    width: 50px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+.chat {
+    border-radius: 5px 5px 5px 0;
+    padding: 10px 20px;
+    background-color: #738482;
+    min-width: 200px;
+    max-width: 300px;
+}
+
+.corner {
+    width: 20px;
+    height: 20px;
+    background: radial-gradient(circle at 0 0, rgba(0,0,0,0) 20px, rgba(115, 132, 130, 100) 0);
+}
+
+.name {
+    font-size: 15px;
+    font-weight: bold;
+    color: #0552dc;
+}
+
+.text {
+    margin: 10px 0;
+    color: #09dc8f;
+    word-wrap: break-word;
+}
+
+.time {
+    display: flex;
+    opacity: 30%;
+    justify-content: flex-end;
+}

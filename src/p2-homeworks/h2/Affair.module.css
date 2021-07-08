@@ -1,0 +1,27 @@
+.affairWrapper {
+    width: 300px;
+    display: flex;
+    margin: 5px;
+    justify-content: space-between;
+    background-color: #738482;
+    border-radius: 5px;
+}
+
+.name {
+    width: 100px;
+    margin: 5px;
+}
+
+.priority {
+    width: 100px;
+    margin: 5px;
+
+}
+
+.button {
+    align-self: end;
+    width: 30px;
+    height: 100%;
+    border-radius: 5px;
+    background-color: #ff0710;
+}
