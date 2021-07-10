@@ -1,7 +1,41 @@
-.someClass {
+.input_wrapper {
+    height: 70px;
+    display: flex;
+    margin: 10px;
+    flex-direction: column;
+}
+
+input {
+    border-radius: 5px;
+    height: 25px;
+    margin-right: 5px;;
+}
+
+button {
+    border-radius: 5px;
+    margin-right: 5px;
+    height: 29px;
+    border: none;
+}
+
+input:focus {
+    outline: none;
 
 }
 
+.correct {
+    border: 2px solid #07beff;
+}
+
 .error {
-    border: 1px solid red;
+    border: 2px solid #ff450a;
+}
+
+.totalUsers {
+    color: #07beff;
+}
+
+.error_message {
+    margin: 10px;
+    color: #ff450a;
 }
