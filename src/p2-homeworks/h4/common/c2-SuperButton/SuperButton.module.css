@@ -1,7 +1,10 @@
 .default {
-
+    margin: 5px;
+    width: 100px;
 }
 
 .red {
+    margin: 5px;
     background: red;
+    width: 100px;
 }
