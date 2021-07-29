@@ -6,13 +6,13 @@
 .superInput {
     margin: 10px;
     color: #4d12ff;
-    background: #61dafb;
+    background: white;
 }
 
 .errorInput {
     margin: 10px;
-    border: 2px solid palegreen;
-    background: #ff0710;
+    border: 2px solid red;
+    background: #ff7f80;
     color: #4d12ff;
 }
 

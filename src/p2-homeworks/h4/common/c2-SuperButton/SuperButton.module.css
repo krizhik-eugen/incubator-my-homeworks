@@ -1,6 +1,7 @@
 .default {
     margin: 5px;
     width: 100px;
+    background-color: #05a9ca;
 }
 
 .red {
