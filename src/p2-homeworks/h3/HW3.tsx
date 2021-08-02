@@ -18,7 +18,7 @@ function HW3() {
     return (
         <div>
             <hr/>
-            homeworks 3
+            Homework 3:
             <GreetingContainer users={users} addUserCallback={addUserCallback}/>
 
             <hr/>

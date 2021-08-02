@@ -16,6 +16,7 @@ button {
     margin-right: 5px;
     height: 29px;
     border: none;
+    cursor: pointer;
 }
 
 input:focus {

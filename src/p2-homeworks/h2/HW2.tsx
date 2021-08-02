@@ -40,7 +40,7 @@ function HW2() {
     return (
         <div>
             <hr/>
-            homeworks 2
+            Homework 2:
 
             <Affairs
                 data={filteredAffairs}

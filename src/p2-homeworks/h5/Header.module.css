@@ -1,0 +1,29 @@
+.navbarWrapper {
+    display: flex
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+}
+
+.link {
+    display: block;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+    height: 20px;
+    margin: 5px;
+    background-color: #738482;
+    cursor: pointer;
+}
+
+.link a {
+    color: #05a9ca;
+    text-decoration: none;
+}
+
+.link a.active {
+    color: #0bff5f;
+    text-decoration: none;
+}
