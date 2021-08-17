@@ -2,10 +2,19 @@
     margin: 5px;
     width: 100px;
     background-color: #05a9ca;
+    font-size: 15px;
+}
+
+.default:hover {
+    font-weight: bold;
 }
 
 .red {
     margin: 5px;
     background: red;
     width: 100px;
+}
+
+.red:hover {
+    font-weight: bold;
 }

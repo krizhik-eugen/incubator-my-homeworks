@@ -1,3 +1,6 @@
+/*
+для варианта с state
+
 .navbarWrapper {
     display: flex
 }
@@ -19,11 +22,44 @@
 }
 
 .link a {
-    color: #05a9ca;
+    color: #0bff5f;
     text-decoration: none;
 }
 
 .link a.active {
     color: #0bff5f;
     text-decoration: none;
+}*/
+
+.link {
+    margin: 10px;
+    text-decoration: none;
+    color: #738482;
+}
+
+.link:hover {
+    color: #05a9ca;
+}
+
+.active {
+    color: #0bff5f
+}
+.hider {
+    width: 20px;
+    height: 20px;
+    margin: 10px;
+    background-color: #05a9ca;
+    border-radius: 5px;
+}
+
+.navbarWrapper {
+    display: flex;
+    width: 300px;
+    transition-duration: 500ms;
+    transform: translate(-240px);
+}
+
+.navbarWrapper:hover {
+    transition-duration: 500ms;
+    transform: translate(0);
 }
