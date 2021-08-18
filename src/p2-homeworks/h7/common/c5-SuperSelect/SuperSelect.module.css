@@ -1,0 +1,27 @@
+.customSelect {
+    cursor: pointer;
+    width: 70px;
+    padding: 5px;
+    margin: 5px;
+    border-radius: 5px;
+    font-size: 15px;
+    outline: none;
+    background-color: #61dafb;
+    border: 2px solid #5898b9
+}
+
+.customOption {
+    background: #61dafb !important;
+}
+
+.customOption:checked{
+    background: #5898b9;
+}
+/*
+
+.customSelect option:hover {
+    background: black;
+}
+*/
+
+

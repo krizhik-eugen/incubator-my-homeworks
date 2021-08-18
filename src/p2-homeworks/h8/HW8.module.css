@@ -1,0 +1,28 @@
+.personsWrapper {
+    margin: 10px;
+    padding: 10px;
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #5898b9;
+    border-radius: 10px;
+}
+.person {
+    display: flex;
+    justify-content: space-between;
+    margin: 5px;
+    color: #5898b9;
+    padding: 1px 10px 1px 10px;
+}
+
+.buttonsWrapper {
+    padding: 5px;
+    display: inline-flex;
+    justify-content: center;
+    border: 1px solid #5898b9;
+    border-radius: 10px;
+}
+
+.pressedButton {
+    background-color: #0cdfff;
+}

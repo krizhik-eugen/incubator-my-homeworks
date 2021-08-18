@@ -1,0 +1,26 @@
+.customInput {
+    display: inline-block;
+    padding: 3px;
+    cursor: pointer;
+}
+
+.customInput input {
+    cursor: pointer;
+    appearance: none;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    outline: none;
+    background: #61dafb;
+}
+
+.customInput input:hover {
+    border: 2px solid #5898b9;
+}
+.customInput input:focus {
+    border: 2px solid #5898b9;
+}
+
+.customInput input:checked {
+    background: #5898b9;
+}
