@@ -1,0 +1,27 @@
+.clockWrapper {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 5px;
+    padding: 5px;
+    border: 1px solid #5898b9;
+    border-radius: 10px;
+    width: 220px
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+}
+
+.time {
+    align-self: center;
+    height: 20px;
+    color: #05a9ca
+}
+
+.date {
+    align-self: center;
+    height: 20px;
+    color: #05a9ca
+}
