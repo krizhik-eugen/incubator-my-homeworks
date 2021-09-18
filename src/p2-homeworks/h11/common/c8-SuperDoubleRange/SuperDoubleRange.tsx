@@ -1,23 +1,92 @@
-import React from 'react'
+import Slider from '@material-ui/core/Slider';
+import withStyles from '@material-ui/core/styles/withStyles';
+import React, {ChangeEvent, DetailedHTMLProps, InputHTMLAttributes, useState} from 'react'
+import SuperRange from '../c7-SuperRange/SuperRange'
+import s from "../c7-SuperRange/SuperRange.module.css";
+
+type DefaultInputPropsType = DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>
 
 type SuperDoubleRangePropsType = {
-    onChangeRange?: (value: [number, number]) => void
-    value?: [number, number]
+    onChangeRange: (value: [number, number]) => void
+    values: [number, number]
+    min: number
+    max: number
     // min, max, step, disable, ...
 }
 
-const SuperDoubleRange: React.FC<SuperDoubleRangePropsType> = (
+const SuperDoubleRange: React.FC<DefaultInputPropsType & SuperDoubleRangePropsType> = (
     {
-        onChangeRange, value,
+        type, // достаём и игнорируем чтоб нельзя было задать другой тип инпута
+        onChangeRange,
+        className,
+        values,
+        min,
+        max,
+        ...restProps
         // min, max, step, disable, ...
     }
 ) => {
     // сделать самому, можно подключать библиотеки
 
+    const [dis, setDis] = useState<boolean>(false)
+
+    const onChangeRangeMin = (e: number) => onChangeRange([e, values[1]]);
+    const onChangeRangeMax = (e: number) => onChangeRange([values[0], e]);
+
+    /*const CustomSlider = withStyles({
+        root: {
+            color: "#6f8eff",
+            height: 3,
+            padding: "13px 0",
+        },
+        track: {
+            height: 4,
+            borderRadius: 2,
+        },
+        thumb: {
+            height: 20,
+            width: 20,
+            backgroundColor: "#fff",
+            border: "1px solid currentColor",
+            marginTop: -9,
+            marginLeft: -11,
+            boxShadow: "#ebebeb 0 2px 2px",
+            "&:focus, &:hover, &$active": {
+                boxShadow: "#ccc 0 2px 3px 1px",
+            },
+            color: "#fff",
+        },
+    })(Slider)*/
+
+
     return (
-        <>
-            DoubleRange
-        </>
+        <div style={{position: 'relative'}}>
+            <div /*style={{position: 'absolute'}}}*/>
+                <SuperRange
+                    value={values[0]}
+                    disabled={dis}
+                    onChange={(e: ChangeEvent<HTMLInputElement>) => {
+                        if (+e.currentTarget.value < values[1]) {
+                            setDis(false);
+                            onChangeRangeMin(+e.currentTarget.value)
+                        }
+                    }}
+                />
+            </div>
+
+            <div /*style={{position: "absolute"}}*/>
+                <SuperRange
+                    className={s.range}
+                    value={values[1]}
+                    disabled={dis}
+                    onChange={(e: ChangeEvent<HTMLInputElement>) => {
+                        if (+e.currentTarget.value > values[0]) {
+                            setDis(false);
+                            onChangeRangeMax(+e.currentTarget.value)
+                        }
+                    }}/>
+            </div>
+        </div>
     )
 }
 
