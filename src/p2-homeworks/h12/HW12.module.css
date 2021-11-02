@@ -21,3 +21,17 @@
 .some-text {
     color: darkslateblue;
 }
+
+.blue {
+    background: #93e2ff;
+}
+.blue-text {
+    color: #0099e6;
+}
+
+.light {
+    background: white;
+}
+.light-text {
+    color: #738482;
+}

@@ -1,5 +1,5 @@
-import Slider from '@material-ui/core/Slider';
-import withStyles from '@material-ui/core/styles/withStyles';
+/*import Slider from '@material-ui/core/Slider';
+import withStyles from '@material-ui/core/styles/withStyles';*/
 import React, {ChangeEvent, DetailedHTMLProps, InputHTMLAttributes, useState} from 'react'
 import SuperRange from '../c7-SuperRange/SuperRange'
 import s from "../c7-SuperRange/SuperRange.module.css";
@@ -7,8 +7,8 @@ import s from "../c7-SuperRange/SuperRange.module.css";
 type DefaultInputPropsType = DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>
 
 type SuperDoubleRangePropsType = {
-    onChangeRange: (value: [number, number]) => void
-    values: [number, number]
+    onChangeRange: (values: number[]) => void
+    values: number[]
     min: number
     max: number
     // min, max, step, disable, ...
@@ -33,7 +33,7 @@ const SuperDoubleRange: React.FC<DefaultInputPropsType & SuperDoubleRangePropsTy
     const onChangeRangeMin = (e: number) => onChangeRange([e, values[1]]);
     const onChangeRangeMax = (e: number) => onChangeRange([values[0], e]);
 
-    /*const CustomSlider = withStyles({
+   /* const CustomSlider = withStyles({
         root: {
             color: "#6f8eff",
             height: 3,
@@ -60,9 +60,10 @@ const SuperDoubleRange: React.FC<DefaultInputPropsType & SuperDoubleRangePropsTy
 
 
     return (
-        <div style={{position: 'relative'}}>
-            <div /*style={{position: 'absolute'}}}*/>
+        <div className={s.rangeWrapper}>
+            <div >
                 <SuperRange
+                    /*style={{position: 'absolute', zIndex: 2}}*/
                     value={values[0]}
                     disabled={dis}
                     onChange={(e: ChangeEvent<HTMLInputElement>) => {
@@ -74,8 +75,9 @@ const SuperDoubleRange: React.FC<DefaultInputPropsType & SuperDoubleRangePropsTy
                 />
             </div>
 
-            <div /*style={{position: "absolute"}}*/>
+            <div >
                 <SuperRange
+                   /* style={{position: "absolute", zIndex: 2}}*/
                     className={s.range}
                     value={values[1]}
                     disabled={dis}
