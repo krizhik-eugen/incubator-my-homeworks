@@ -1,0 +1,16 @@
+.commonContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.rangeContainer {
+    display: inline-flex;
+    margin: 5px 0;
+}
+
+.valueStatus {
+    display: block;
+    width: 30px;
+    margin: 10px 10px;
+    text-align: center;
+}
