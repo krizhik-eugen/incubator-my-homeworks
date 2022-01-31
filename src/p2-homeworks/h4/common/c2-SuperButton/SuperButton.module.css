@@ -3,10 +3,13 @@
     width: 100px;
     background-color: #05a9ca;
     font-size: 15px;
+    border: 2px solid #5898b9;
+    border-radius: 5px;
 }
 
 .default:hover {
     font-weight: bold;
+    cursor: pointer;
 }
 
 .red {
